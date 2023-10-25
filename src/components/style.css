@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    height: 100vh;
+    /* height: 100vh; */
     background:linear-gradient(rgb(129, 121, 250), rgb(209, 200, 200));
   }
   .description h1{
@@ -16,11 +16,7 @@
     width: 100%;
     padding: 0px;
   }
-  
-  /* .logoimage{
-    height: 100px;
-    background-color: aqua;
-  } */
+
   .logo {
 
     color: #fff;
@@ -33,10 +29,14 @@
     font-weight: bold;
     font-size: 24px;
     color: #fff;
-    padding-top: 60px;
-    padding-right: 80px;
+    padding-top: 50px;
+    padding-right: 90px;
   }
-  
+  .useremail{
+    color: #fff;
+    font-size: 20px;
+    padding-right: 90px;
+  }
   main {
     text-align: center;
   }
@@ -119,8 +119,8 @@
   }
   .loginBut p{
     color:white;
-    font-size: 20px;
-    margin-top: -10px;
+    font-size: 25px;
+    margin-top: 2px;
   }
   .siG{
     display: flex;
@@ -234,3 +234,65 @@
     font-size: 20px;
   }
 /* /////////////////////////////////////////////////end sign up css */
+
+
+/* ///////////////////////////////////////////sale form style start */
+/* Add this CSS in a separate .css or .scss file and import it into your component */
+
+/* Add this CSS in a separate .css or .scss file and import it into your component */
+
+.form-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  margin-bottom: 40px;
+}
+
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-wrap: wrap; /* Allows input pairs to wrap to the next line */
+  justify-content: space-between; /* Add space between input pairs */
+}
+
+.form-row {
+  flex-basis: 48%; /* Each input pair takes roughly half of the container */
+}
+
+.form-container label {
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+ 
+}
+
+.form-container button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* /////////////////////////////////////////// sales form end */

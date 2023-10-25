@@ -12,6 +12,9 @@ import {
 import Login from './components/Login';
 import Home from './components/Home';
 import Signup from './components/Signup';
+import Accountdashboard from './components/account/accountdashboard'
+import Salesmandashboard from './components/salesman/salesmandashboard'
+import Customerdashboard from './components/customer/customerdashboard'
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,18 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home/>,
+  },
+  {
+    path: "/accountdashboard",
+    element: <Accountdashboard/>,
+  },
+  {
+    path: "/salesmandashboard",
+    element: <Salesmandashboard/>,
+  },
+  {
+    path: "/customerdashboard",
+    element: <Customerdashboard/>,
   },
  
 ]);

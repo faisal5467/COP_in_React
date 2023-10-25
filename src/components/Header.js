@@ -1,9 +1,9 @@
 import React from "react";
 
-function Signup() {
+function Header() {
 return(
     <h1>Earthlink</h1>
  );
 }
 
-export default Signup;
+export default Header;

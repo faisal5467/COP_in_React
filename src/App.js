@@ -7,7 +7,8 @@ import Home from "./components/Home"; // Create this component
 
 function App() {
   return (
-    <Signup/>
+    <h1>app</h1>
+    // <Signup/>
     // <BrowserRouter>
     //   <Routes>
     //     <Route path="/" component={<Home />} />

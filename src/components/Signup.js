@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import logoimage from "./assets/Earthlink_logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate();
 
   const initialFormData ={
     name: "",
@@ -23,7 +25,7 @@ function Signup() {
     // Here you can submit the formData to your backend.
     console.log("Form data submitted:", formData);
     localStorage.setItem('userData', JSON.stringify(formData));
-
+    navigate('/')
 // Redirect to the dashboard based on the selected role
 // const checkrole = formData.role;
 // if (checkrole === 'customer') {
@@ -56,6 +58,7 @@ function Signup() {
               <input
                 type="text"
                 name="name"
+                placeholder="Name"
                 value={formData.name}
                 onChange={handleInputChange}
               />
@@ -64,6 +67,7 @@ function Signup() {
               <label>Email:</label>
               <input
                 type="email"
+                placeholder="Email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
@@ -74,6 +78,7 @@ function Signup() {
               <input
                 type="password"
                 name="password"
+                placeholder="Password"
                 value={formData.password}
                 onChange={handleInputChange}
               />
@@ -90,7 +95,8 @@ function Signup() {
                 <option value="accounts">Accounts</option>
               </select>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Sign Up</button>
+            {/* <button onClick={()=>{navigate('/')}} type="submit">Sign Up</button> */}
             <a href="/" style={{ alignSelf: "center" }}>
             Have an account
           </a>
