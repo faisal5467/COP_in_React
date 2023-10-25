@@ -1,22 +1,18 @@
 import React, { useState } from "react";
-
 import "./style.css";
-
 import { Link } from "react-router-dom";
 import logoimage from "./assets/Earthlink_logo.png";
 
 function Signup() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  ///////////////////////////////////////////////
 
-  const [formData, setFormData] = useState({
+  const initialFormData ={
     name: "",
     email: "",
     password: "",
     role: "customer", // Default role
-  });
+  };
 
+  const [formData, setFormData] = useState({ ...initialFormData });
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -26,12 +22,21 @@ function Signup() {
     e.preventDefault();
     // Here you can submit the formData to your backend.
     console.log("Form data submitted:", formData);
+    localStorage.setItem('userData', JSON.stringify(formData));
+
+// Redirect to the dashboard based on the selected role
+// const checkrole = formData.role;
+// if (checkrole === 'customer') {
+//   history.push('/customer-dashboard');
+// } else if (checkrole === 'salesman') {
+//   history.push('/salesman-dashboard');
+// } else if (checkrole === 'accounts') {
+//   history.push('/accounts-dashboard');
+// }
+
+    setFormData({ ...initialFormData });
   };
-  // ////////////////////////////////////////////
-  const handleSignup = () => {
-    const user = { username, password };
-    localStorage.setItem("user", JSON.stringify(user));
-  };
+ 
 
   return (
     <div className="App">

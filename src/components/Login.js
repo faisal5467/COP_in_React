@@ -14,6 +14,17 @@ function Login() {
   const handleLogin = () => {
     const user = { username, password };
     localStorage.setItem('user', JSON.stringify(user));
+
+// ///////////////check
+//     const checkrole = JSON.parse(localStorage.getItem('userData')).role;
+// if (checkrole === 'customer') {
+//   history.push('/customer-dashboard');
+// } else if (checkrole === 'salesman') {
+//   history.push('/salesman-dashboard');
+// } else if (checkrole === 'accounts') {
+//   history.push('/accounts-dashboard');
+// }
+
   
   };
 
