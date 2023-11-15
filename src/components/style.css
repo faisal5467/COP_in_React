@@ -5,45 +5,88 @@
     align-items: center;
     /* justify-content: center; */
     /* height: 100vh; */
-    background:linear-gradient(rgb(129, 121, 250), rgb(209, 200, 200));
+    /* background:linear-gradient(rgb(19, 74, 255), rgb(175, 200, 224)); */
   }
   .description h1{
-    color: #fff;
+    color: black;
   }
+
+  /* //////////////////////////////// */
   header {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    width: 80%;
+    /* background-color: #0056b3; */
   }
 
-  .logo {
-
-    color: #fff;
-    height: 90px;
-    padding-top: 40px;
-    padding-left: 50px;
+  .dashboard-logo {
+    max-width: 200px;
+    height: auto;
+    padding: 10px;
   }
-  
-  .user {
+
+  .Empl0yee-data {
+    flex: 1;
+    padding-top: 20px;
+    color:  black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    /* background-color: #007bff; */
+    /* display: flex; */
+    /* text-align: end; */
+    text-align: end;
+    /* align-items: center; */
+  }
+
+  .useremail {
+    font-weight: 300;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  @media screen and (max-width: 768px) {
+    .dashboard-logo {
+      max-width: 150px;
+    }
+    .Empl0yee-data {
+      flex-basis: 100%;
+      text-align: center;
+      padding: 0;
+    }
+    .useremail {
+      font-size: 14px;
+    }
+    table {
+      width: 70%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+  }
+  /* ////////////////////////////// */
+
+  /* .user {
     font-weight: bold;
     font-size: 24px;
-    color: #fff;
+    color: black;
     padding-top: 50px;
     padding-right: 90px;
   }
   .useremail{
-    color: #fff;
+    color: black;
     font-size: 20px;
     padding-right: 90px;
-  }
+  } */
   main {
     text-align: center;
   }
   
   .description {
     margin-bottom: 20px;
-    color: #fff;
+    color: black;
   }
   
   button {
@@ -59,180 +102,132 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 100vh;
-    min-height: 100vh;
-    background:linear-gradient(rgb(129, 121, 250), rgb(209, 200, 200));
+    width: 100%;
+    height: 100vh;
+    padding: 20px 0px 40px;
+    background: linear-gradient(rgb(44, 26, 122), rgb(130, 118, 238));
   }
-  
-  .loginContainer{
-    display: flex;
+
+  .logo {
+
+    color: #fff;
+    height: 90px;
+    padding-left: 10px;
+  }
+  .loginContainer {
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 25em;
-    height: 70vh;
+    align-items: center; */
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 25px;
   }
+
   .input-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin: 10px;
+    width: 100%;
   }
-  .input-container input{
-    height: 1.5em;
-    width: 15em;
-    border-radius: 15px;
-    border-width: 15px;
-    border:white;
-    box-shadow: 0 0 6px rgb(166, 159, 255);
+
+  .input-container input {
+    border-radius: 10px;
+    border: 2px solid rgb(166, 159, 255);
     outline: none;
-    padding:10px;
-    font-size: 20px;
+    padding: 10px;
+    font-size: 16px;
   }
-  input:focus{   
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 16px rgb(125, 115, 255);
-    outline: 0 none;
+
+  .loginBut {
+    height: 3em;
+    width: 90%;
+    max-width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    background: linear-gradient(rgb(44, 26, 122), rgb(130, 118, 238));
+    border: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .loginBut:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+  }
+
+  .loginBut p {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .siG {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    height: 3em;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    border: 3px dashed rgb(152, 145, 255);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .siG:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgb(199, 199, 199);
+  }
+
+  .siG p {
+    font-size: 18px;
+    margin: 0;
   }
   a{
     color: rgb(0, 68, 255);
     font-weight: 500;
-    margin: 5px;
     cursor: pointer;
     align-self: baseline;
     /* margin-left: 40px; */
   }
-  .loginBut {
-    height: 4em;
-    width: 24em;
-    margin: 10px;
-    margin-top: 25px;
-    border-radius: 15px;
-    background:linear-gradient(rgb(124, 114, 255), rgb(255, 116, 116));
-    border: none;
-    transition: all .2s ease-in-out;
+  @media (max-width: 768px) {
+    .loginContainer {
+      width: 90%;
+      max-width: 300px;
+    }
+
+    .loginBut {
+      max-width: 200px;
+    }
+
+    .siG {
+      max-width: 200px;
+    }
+    
+  .logo {
+
+    color: #fff;
+    height: 50px;
+    padding-left: 20px;
   }
- 
-  .loginBut:hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 12px rgb(199, 199, 199);
   }
-  .loginBut p{
-    color:white;
-    font-size: 25px;
-    margin-top: 2px;
-  }
-  .siG{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:18px;
-    height: 4em;
-    width: 24em;
-    margin: 10px;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(152, 145, 255);
-    border-width: 3px;
-    border-style: dashed;
-    transition: all .2s ease-in-out;
-  }
-  .siG:hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 12px rgb(199, 199, 199);
-    cursor: pointer;
-  }
-  .siG p{
-    font-size: 20px;
-  }
-  
   /* ///////////////////Login Css */
 
 
-  /* ////////////////////////////////////////////// start  Signup css */
-  
-  
-  .SignupContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25em;
-    height: 75vh;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px;
-  }
-  .input-container {
+
+  .Sign-input-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin: 10px;
+    width: 100%;
   }
-  .input-container input{
-    height: 1.5em;
-    width: 15em;
-    border-radius: 15px;
-    border-width: 15px;
-    border:white;
-    box-shadow: 0 0 6px rgb(166, 159, 255);
-    outline: none;
-    padding:10px;
-    font-size: 20px;
-  }
-  input:focus{   
-    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 16px rgb(125, 115, 255);
-    outline: 0 none;
-  }
-  a{
-    color: rgb(0, 68, 255);
-    font-weight: 500;
-    margin: 5px;
-    cursor: pointer;
-    align-self: baseline;
-    /* margin-left: 40px; */
-  }
-  .SignupBut {
-    height: 4em;
-    width: 24em;
-    margin: 10px;
-    margin-top: 25px;
-    border-radius: 15px;
-    background:linear-gradient(rgb(124, 114, 255), rgb(255, 116, 116));
-    border: none;
-    transition: all .2s ease-in-out;
-  }
- 
-  .SignupBut:hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 12px rgb(199, 199, 199);
-  }
-  .SignupBut p{
-    color:white;
-    font-size: 20px;
-    margin-top: -10px;
-  }
-  .siG{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:18px;
-    height: 4em;
-    width: 24em;
-    margin: 10px;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(152, 145, 255);
-    border-width: 3px;
-    border-style: dashed;
-    transition: all .2s ease-in-out;
-  }
-  .siG:hover{
-    transform: scale(1.1);
-    box-shadow: 0 0 12px rgb(199, 199, 199);
-    cursor: pointer;
-  }
-  .siG p{
-    font-size: 20px;
-  }
+
+
 /* /////////////////////////////////////////////////end sign up css */
 
 

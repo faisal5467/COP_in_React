@@ -3,75 +3,53 @@ import Home from "./Home";
 import "./style.css";
 import Header from "./Header";
 import { Link } from "react-router-dom";
-import logoimage from "./assets/Earthlink_logo.png";
+import logoimage from "./assets/Earthlink_logo1.png";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { BASE_URL } from "./commen/base_url";
 
 function Login() {
-  //   const [username, setUsername] = useState('');
-  //   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
-  //   const handleLogin = () => {
-  //     const user = { username, password };
-  //     localStorage.setItem('user', JSON.stringify(user));
-  //  };
-  // ///////////////check
-  //     const checkrole = JSON.parse(localStorage.getItem('userData')).role;
-  // if (checkrole === 'customer') {
-  //   history.push('/customer-dashboard');
-  // } else if (checkrole === 'salesman') {
-  //   history.push('/salesman-dashboard');
-  // } else if (checkrole === 'accounts') {
-  //   history.push('/accounts-dashboard');
-  // }
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [validationError, setValidationError] = useState("");
+  const [error, setError] = useState(null);
 
-  // const checkrole = JSON.parse(localStorage.getItem('userData')).role;
-  const handleLogin = () => {
-    // Get the role and email from localStorage
-    const checkrole = JSON.parse(localStorage.getItem("userData"));
-    console.log("user data is ", checkrole);
-    if (checkrole) {
-      const {
-        role,
-        email: storedEmail,
-        password: storedPassword,
-        name,
-      } = checkrole;
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
+    try {
       if (email.trim() === "" || password.trim() === "") {
-        alert("Please fill in both email and password fields.");
+        setError("Please fill the fields.");
         return; // Stop further execution
       }
-      if (email === storedEmail && password === storedPassword) {
-        // Email matches, check the role
-        if (role === "customer") {
-          // navigate('/customerdashboard');
-          navigate(`/customerdashboard`, {
-            state: { name, email },
-          });
-        } else if (role === "salesman") {
-          // navigate('/salesmandashboard');
-          navigate(`/salesmandashboard`, {
-            state: { name, email },
-          });
-          console.log("mera user", checkrole);
-        } else if (role === "accounts") {
-          // navigate('/accountdashboard');
-          navigate(`/accountdashboard`, {
-            state: { name, email },
-          });
-        }
-      } else {
-        // Email doesn't match the one stored in localStorage
-        alert("Invalid email and password");
+
+      const response = await axios.post(`${BASE_URL}/login`, {
+        email,
+        password,
+      });
+
+      console.log("ye res", response.data);
+      const checkrole = response.data;
+
+      // Email matches, check the role
+      if (checkrole.role === "customer") {
+        navigate(`/customerdashboard`, {
+          state: { checkrole },
+        });
+      } else if (checkrole.role === "salesman") {
+        navigate(`/salesmandashboard`, {
+          state: { checkrole },
+        });
+        console.log("mera user", checkrole);
+      } else if (checkrole.role === "accounts") {
+        navigate(`/accountdashboard`, {
+          state: { checkrole },
+        });
       }
-    } else {
-      // User not found in localStorage
-      alert("User not found. Please register.");
+    } catch (error) {
+      // Handle login failure, show an error message, etc.
+      setError(error.response ? error.response.data.error : "Unknown error");
     }
   };
 
@@ -99,7 +77,7 @@ function Login() {
         </div>
         <button type="submit">Login</button>
       </form>
-      {validationError && <p>{validationError}</p>}
+
       <a href="/signup" style={{alignSelf:'center'}}>Create a new account</a>
     </div> */}
 
@@ -131,14 +109,12 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+            {error && <p style={{ textAlign: "center" }}>{error}</p>}
             <button className="loginBut" type="submit">
               <p>Login</p>
             </button>
           </form>
-          {validationError && <p>{validationError}</p>}
-          <a href="/signup" style={{ alignSelf: "center" }}>
-            Create a new account
-          </a>
+
           {/* ///////////// */}
           {/* <div className="input-container">
           <label>Username</label>

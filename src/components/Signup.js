@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
-import logoimage from "./assets/Earthlink_logo.png";
+import logoimage from "./assets/Earthlink_logo1.png";
 import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const navigate = useNavigate();
+  const [error, setError] = useState(null);
 
   const initialFormData ={
     name: "",
+    cnic: "",
+    contact: "",
     email: "",
     password: "",
     role: "customer", // Default role
@@ -22,6 +25,18 @@ function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (
+      !formData.name ||
+      !formData.cnic ||
+      !formData.contact ||
+      !formData.email ||
+      !formData.password ||
+      !formData.role  // Initialize the role field
+    ) {
+      setError("Please fill in all the fields.");
+      return;
+    }
     // Here you can submit the formData to your backend.
     console.log("Form data submitted:", formData);
     localStorage.setItem('userData', JSON.stringify(formData));
@@ -47,8 +62,8 @@ function Signup() {
           <img src={logoimage} alt="Your Logo" className="logo" />
         </div>
 
-        <div className="SignupContainer">
-          <h1>Sign Up</h1>
+        <div className="loginContainer">
+          <h1 style={{textAlign:'center'}}>Sign Up</h1>
          
 
           {/* ///////////////// */}
@@ -60,6 +75,26 @@ function Signup() {
                 name="name"
                 placeholder="Name"
                 value={formData.name}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="input-container">
+              <label>CNIC:</label>
+              <input
+                type="text"
+                placeholder="CNIC"
+                name="cnic"
+                value={formData.cnic}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="input-container">
+              <label>Contact:</label>
+              <input
+                type="text"
+                placeholder="Contact"
+                name="contact"
+                value={formData.contact}
                 onChange={handleInputChange}
               />
             </div>
@@ -95,11 +130,14 @@ function Signup() {
                 <option value="accounts">Accounts</option>
               </select>
             </div>
-            <button type="submit">Sign Up</button>
-            {/* <button onClick={()=>{navigate('/')}} type="submit">Sign Up</button> */}
-            <a href="/" style={{ alignSelf: "center" }}>
-            Have an account
-          </a>
+            {error && <p style={{textAlign: 'center'}}>{error}</p>}
+            <button className="loginBut" type="submit">
+              <p>Sign Up</p>
+            </button>
+            <a onClick={() => navigate(-1)} style={{ textAlign: "center", color: "black" }}>
+              <p>Already have an account</p>
+            </a>
+           
           </form>
           {/* ///////////////// */}
         </div>

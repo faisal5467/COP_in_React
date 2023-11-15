@@ -5,9 +5,9 @@ import { useLocation } from 'react-router-dom';
 import Logout from "../commen/logout";
 
 const Salesmandashboard = () => {
-    const location = useLocation();
-    const { name, email } = location.state;
-    console.log('yar ', name)
+  const location = useLocation();
+  const { checkrole } = location.state;
+  console.log('dashboard salesman ', checkrole)
 
 
 
@@ -42,15 +42,22 @@ const Salesmandashboard = () => {
 
 return(
     <div className="home-container">
-    <header>
+   <header>
+    <a href="/salesmandashboard">
+    <img src={logoimage} alt="Your Logo" className="dashboard-logo" />
+</a>
+   
+    <div className="Empl0yee-data">
     
-    <img src={logoimage} alt="Your Logo" className="logo" />
-    <div>
-      <div className="user">Salesman: {name}</div>
-      <div className="useremail">Email: {email}</div>
+      <div className="user">Name:   {checkrole.name}</div>
+      <div className="useremail">CNIC:  {checkrole.cnic}</div>
+      <div className="useremail">Contact:  {checkrole.contact}</div>
+      <div className="useremail">Email:  {checkrole.email}</div>
+      
       <Logout/>
       </div>
     </header>
+
     <main>
       <div className="description">
         <h1>Welcome to Earthlink</h1>

@@ -6,28 +6,43 @@ import Logout from "../commen/logout";
 
 const Customerdashboard = () => {
     const location = useLocation();
-    const { name, email } = location.state;
-    console.log('yar ', name)
+    const { checkrole } = location.state;
+    console.log('dashboard ', checkrole)
 
 return(
     <div className="home-container">
-    <header>
+
+<header>
+    <a href="/salesmandashboard">
+    <img src={logoimage} alt="Your Logo" className="dashboard-logo" />
+</a>
+   
+    <div className="Empl0yee-data">
     
-    <img src={logoimage} alt="Your Logo" className="logo" />
-    <div>
-      <div className="user">Customer: {name}</div>
-      <div className="useremail">Email: {email}</div>
+      <div className="user">Name:   {checkrole.name}</div>
+      <div className="useremail">CNIC:  {checkrole.cnic}</div>
+      <div className="useremail">Contact:  {checkrole.contact}</div>
+      <div className="useremail">Email:  {checkrole.email}</div>
+      
       <Logout/>
       </div>
     </header>
+
     <main>
+   
+      <div className="buttons">
+        <button>Account /<br></br>
+           Surcharge Statement</button>
+        <button>Discount /<br></br>
+           Rent Statement</button>
+        <button>Payment /<br></br>
+        Statement</button>
+
+      </div>
+
       <div className="description">
         <h1>Welcome to Earthlink</h1>
-        <p>This is Acoount dashboard for your information</p>
-      </div>
-      <div className="buttons">
-        <button>Submit</button>
-        {/* <button>View Rebat</button> */}
+        <p>This is customer for your information</p>
       </div>
     </main>
   </div>
