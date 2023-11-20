@@ -15,6 +15,7 @@ import Signup from './components/Signup';
 import Accountdashboard from './components/account/accountdashboard'
 import Salesmandashboard from './components/salesman/salesmandashboard'
 import Customerdashboard from './components/customer/customerdashboard'
+import Payment from './components/customer/payment';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/customerdashboard",
     element: <Customerdashboard/>,
+  },
+  {
+    path: "/payment",
+    element: <Payment/>,
   },
  
 ]);

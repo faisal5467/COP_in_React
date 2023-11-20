@@ -24,7 +24,7 @@ const Salesmandashboard = () => {
     customerEmail: "",
     customerAddress: "",
     customerCity: "",
-    agentEmpid: "",
+    customerId: "",
     slotNumber: "",
     sizeInSqFt: "",
     unitNumber: "",
@@ -55,7 +55,7 @@ const Salesmandashboard = () => {
       customerEmail: "",
       customerAddress: "",
       customerCity: "",
-      agentEmpid: "",
+      customerId: "",
       slotNumber: "",
       sizeInSqFt: "",
       unitNumber: "",
@@ -300,11 +300,11 @@ const handleInputChange = (e) => {
           </div>
 
           <div className="form-row">
-            <label>Agent Employee ID *</label>
+            <label>Customer ID *</label>
             <input
               type="text"
-              name="agentEmpid"
-              value={formData.agentEmpid}
+              name="customerId"
+              value={formData.customerId}
               onChange={handleInputChange}
               required
             />
@@ -497,7 +497,7 @@ const handleInputChange = (e) => {
 
           
           <div className="form-row">
-            <label>Total Installment Ammount</label>
+            <label>Total Installment Amount</label>
             {/* <input
               type="text"
               name="totalInstallmentAmount"

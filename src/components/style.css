@@ -1,74 +1,74 @@
 /* Add this CSS to your project to style the home page */
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    /* height: 100vh; */
-    /* background:linear-gradient(rgb(19, 74, 255), rgb(175, 200, 224)); */
-  }
-  .description h1{
-    color: black;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* height: 100vh; */
+  /* background:linear-gradient(rgb(19, 74, 255), rgb(175, 200, 224)); */
+}
+.description h1 {
+  color: black;
+}
 
-  /* //////////////////////////////// */
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 15px;
-    width: 80%;
-    /* background-color: #0056b3; */
-  }
+/* //////////////////////////////// */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  width: 80%;
+  /* background-color: #0056b3; */
+}
 
+.dashboard-logo {
+  max-width: 200px;
+  height: auto;
+  padding: 10px;
+}
+
+.Empl0yee-data {
+  flex: 1;
+  padding-top: 20px;
+  color: black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  /* background-color: #007bff; */
+  /* display: flex; */
+  /* text-align: end; */
+  text-align: end;
+  /* align-items: center; */
+}
+
+.useremail {
+  font-weight: 300;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@media screen and (max-width: 768px) {
   .dashboard-logo {
-    max-width: 200px;
-    height: auto;
-    padding: 10px;
+    max-width: 150px;
   }
-
   .Empl0yee-data {
-    flex: 1;
-    padding-top: 20px;
-    color:  black;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+    flex-basis: 100%;
     text-align: center;
-    /* background-color: #007bff; */
-    /* display: flex; */
-    /* text-align: end; */
-    text-align: end;
-    /* align-items: center; */
+    padding: 0;
   }
-
   .useremail {
-    font-weight: 300;
-    font-size: 15px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
   }
-
-  @media screen and (max-width: 768px) {
-    .dashboard-logo {
-      max-width: 150px;
-    }
-    .Empl0yee-data {
-      flex-basis: 100%;
-      text-align: center;
-      padding: 0;
-    }
-    .useremail {
-      font-size: 14px;
-    }
-    table {
-      width: 70%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+  table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
   }
-  /* ////////////////////////////// */
+}
+/* ////////////////////////////// */
 
-  /* .user {
+/* .user {
     font-weight: bold;
     font-size: 24px;
     color: black;
@@ -80,156 +80,169 @@
     font-size: 20px;
     padding-right: 90px;
   } */
-  main {
-    text-align: center;
-  }
-  
-  .description {
-    margin-bottom: 20px;
-    color: black;
-  }
-  
-  button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  /* //////////////////// Login Css */
-  .App {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    padding: 20px 0px 40px;
-    background: linear-gradient(rgb(44, 26, 122), rgb(130, 118, 238));
-  }
+main {
+  /* text-align: center;
+    background-color: #a6b9cc;
+ width: 80%; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* background-color: #007bff; */
+}
+.buttons {
+ text-align: center;
+  /* background-color: #4caf50; */
+}
+button{
+  border-radius: 10px;
+}
+.Project-detials {
+  float: left;
+  /* background-color: #333; */
+}
+.description {
+  margin-bottom: 20px;
+  color: black;
+  text-align: center;
+}
 
-  .logo {
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+/* //////////////////// Login Css */
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px 0px 40px;
+  background: linear-gradient(rgb(44, 26, 122), rgb(130, 118, 238));
+}
 
-    color: #fff;
-    height: 90px;
-    padding-left: 10px;
-  }
-  .loginContainer {
-    /* display: flex;
+.logo {
+  color: #fff;
+  height: 90px;
+  padding-left: 10px;
+}
+.loginContainer {
+  /* display: flex;
     flex-direction: column;
     align-items: center; */
+  width: 90%;
+  max-width: 350px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.input-container input {
+  border-radius: 10px;
+  border: 2px solid rgb(166, 159, 255);
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.loginBut {
+  height: 3em;
+  width: 90%;
+  max-width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  background: linear-gradient(rgb(44, 26, 122), rgb(130, 118, 238));
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.loginBut:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgb(199, 199, 199);
+}
+
+.loginBut p {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+
+.siG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  height: 3em;
+  width: 100%;
+  max-width: 250px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  border: 3px dashed rgb(152, 145, 255);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.siG:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgb(199, 199, 199);
+}
+
+.siG p {
+  font-size: 18px;
+  margin: 0;
+}
+a {
+  color: rgb(0, 68, 255);
+  font-weight: 500;
+  cursor: pointer;
+  align-self: baseline;
+  /* margin-left: 40px; */
+}
+@media (max-width: 768px) {
+  .loginContainer {
     width: 90%;
-    max-width: 350px;
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25px;
-  }
-
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .input-container input {
-    border-radius: 10px;
-    border: 2px solid rgb(166, 159, 255);
-    outline: none;
-    padding: 10px;
-    font-size: 16px;
+    max-width: 300px;
   }
 
   .loginBut {
-    height: 3em;
-    width: 90%;
-    max-width: 250px;
-    margin: 10px;
-    border-radius: 10px;
-    background: linear-gradient(rgb(44, 26, 122), rgb(130, 118, 238));
-    border: none;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-  }
-
-  .loginBut:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 12px rgb(199, 199, 199);
-  }
-
-  .loginBut p {
-    color: white;
-    font-size: 20px;
-    margin: 0;
+    max-width: 200px;
   }
 
   .siG {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    height: 3em;
-    width: 100%;
-    max-width: 250px;
-    margin: 10px;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
-    border: 3px dashed rgb(152, 145, 255);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
+    max-width: 200px;
   }
 
-  .siG:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 12px rgb(199, 199, 199);
-  }
-
-  .siG p {
-    font-size: 18px;
-    margin: 0;
-  }
-  a{
-    color: rgb(0, 68, 255);
-    font-weight: 500;
-    cursor: pointer;
-    align-self: baseline;
-    /* margin-left: 40px; */
-  }
-  @media (max-width: 768px) {
-    .loginContainer {
-      width: 90%;
-      max-width: 300px;
-    }
-
-    .loginBut {
-      max-width: 200px;
-    }
-
-    .siG {
-      max-width: 200px;
-    }
-    
   .logo {
-
     color: #fff;
     height: 50px;
     padding-left: 20px;
   }
-  }
-  /* ///////////////////Login Css */
+}
+/* ///////////////////Login Css */
 
-
-
-  .Sign-input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-
+.Sign-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
 
 /* /////////////////////////////////////////////////end sign up css */
-
 
 /* ///////////////////////////////////////////sale form style start */
 /* Add this CSS in a separate .css or .scss file and import it into your component */
@@ -242,7 +255,7 @@
 }
 .datetime input {
   background-color: #f5f5f5;
- border: none;
+  border: none;
 }
 .your-form-container {
   width: 80%;
@@ -255,12 +268,12 @@
 }
 .your-form-container h2 {
   text-align: center;
-  margin-bottom:50px;
-  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 50px;
+  font-family: "Times New Roman", Times, serif;
 }
 .your-form-container label {
   font-weight: 500;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 .your-form-container form .form-row {
   display: flex;
@@ -288,8 +301,7 @@
   /* text-align: right; */
 }
 
-
-.your-form-container form .form-row  input {
+.your-form-container form .form-row input {
   width: 80%;
   padding: 10px;
   margin: 5px 0;
@@ -297,14 +309,13 @@
   border-radius: 4px;
 }
 
-
-/* select {
+select {
   width: 40%;
   padding: 5px;
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-} */
+}
 
 .form-buttons {
   display: flex;
@@ -321,7 +332,7 @@
 }
 
 .form-buttons button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 /* Media queries for responsiveness */
@@ -370,9 +381,10 @@ td {
   border: 1px solid #ddd;
 }
 
- /* Responsive CSS */
- @media screen and (max-width: 767px) {
-  table th, table td {
+/* Responsive CSS */
+@media screen and (max-width: 767px) {
+  table th,
+  table td {
     display: block;
     width: 95%;
   }
@@ -397,5 +409,4 @@ td {
     width: 100%;
     margin: 5px 0;
   }
-
 }
